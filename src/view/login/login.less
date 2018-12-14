@@ -1,0 +1,105 @@
+@img:"../../assets/img";
+.relative{
+    position: relative;
+};
+.backSize{
+    background-size:100% 100%;
+}
+.transform{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+};
+#login{
+    height: 100%;
+    background: url("@{img}/login_bg.png") no-repeat;
+    .backSize;
+    .relative;
+    .login_bg1{
+        width: 448px;
+        height: 443px;
+        background: url("@{img}/login_bg1.png") no-repeat;
+        .backSize;
+        .transform;
+        left:28%
+    }
+    #login_form{
+        .backSize;
+        .transform;
+        background: url("@{img}/from_bg.png") no-repeat;
+        left:70%;
+        width:620px;
+        height:509px;
+        >div:not(:first-child){
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            padding: 0 80px;
+            margin:30px 0;
+            position: relative;
+            >span{
+                display: inline-block;
+                width:13%;
+                font-size: 19px; 
+                line-height: 38px;
+            }
+            >input{
+                background: #1e508b;
+                border: 1px solid #012f63;
+            }
+            >input,>div{
+                width: 376px;
+                height: 38px;
+                display: flex;
+                justify-content: space-between;
+                line-height: 38px;
+                span{
+                    font-size: 16px;
+                    a{
+                        color: white;
+                    }
+                    #checkbox{
+                        width: 16px;
+                        height: 16px;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            #submit{
+                display: initial;
+                position: absolute;
+                left: calc(13% + 80px);
+                width: 102px;
+                height: 42px;
+                background: url("@{img}/from_btn_bg.png");
+                .backSize;
+                font-size:20px;
+                line-height: 38px;
+                border: none;
+                color: white;
+                padding: 0;
+                outline: none;
+                text-align: center;
+            }
+        }
+        
+    }
+    .title{
+        width:100%;
+        text-align: center;
+        color: white;
+        margin: 40px 0;
+        p:nth-child(1){
+            font-size: 62px;
+        }
+        p:nth-child(2){
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    }
+    
+}
+
+

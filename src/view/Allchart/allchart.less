@@ -1,0 +1,88 @@
+@img:"../../assets/img";
+.transform{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#app {
+    background: url(../../assets/img/bg.png);
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    #chart {
+        position: relative;
+        width: calc(100% - 40px);
+        height: calc(90% - 40px);
+        border: 1px solid #4181EB;
+        margin: 20px;
+        box-sizing: border-box;
+        
+        .nav{
+            display: inline-block;
+            color: white;
+            font-size: 18px;
+            .transform;
+            top: 0;
+            background: url('@{img}/nav_bg.png') no-repeat;
+            background-size:100% 100%;
+            padding:5px;
+            z-index: 9999;
+            
+            span{
+                font-size: 18px;
+                padding: 0 20px;
+                height: 36px;
+                display: inline-block;
+                line-height: 36px;
+                text-align: center;
+                cursor: pointer;
+                background: #1a3f83;
+            }
+            
+            span.active{
+                border-right:1px solid #000B40;
+                background: #2d69d6;
+            }
+        }
+        
+        #lyl,#gzl{
+            height: 100%;
+        }
+    }
+    .toggle {
+        background: url(../../assets/img/toggle.png) no-repeat;
+        width: 26px;
+        height: 26px;
+        background-size: 100% 100%;
+        position: absolute;
+        cursor: pointer;
+        top: 9%;
+        left: 10px;
+    }
+    #title {
+        background: url(../../assets/img/title_bg.png) no-repeat;
+        width: 100%;
+        height: 10%;
+        background-size: 100% 100%;
+        text-align: center;
+        position: relative;
+        span {
+            color: transparent;
+            background: linear-gradient(white 20%, #5284C3);
+            -webkit-background-clip: text;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: "微软雅黑";
+        }
+        .home{
+            left: 20px;
+            top: 31%;
+        }
+        .allchart{
+            right: 20px;
+            top: 31%;
+            color: white;
+        }
+    }
+}
